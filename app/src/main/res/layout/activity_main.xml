@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        app:queryHint="Search bus route..."
+        app:iconifiedByDefault="false"
+        app:queryBackground="@android:color/transparent"
+        android:elevation="4dp"
+        android:outlineAmbientShadowColor="#E53935"
+        android:outlineSpotShadowColor="#E53935">
+</androidx.appcompat.widget.SearchView>
+
+
+<View
+android:layout_width="match_parent"
+android:layout_height="1dp"
+android:background="#EEEEEE"/>
+
+
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/busList"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingVertical="8dp"
+android:scrollbars="vertical"
+android:clipToPadding="false"
+android:overScrollMode="never"/>
+
+
+<TextView
+android:id="@+id/emptyState"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center"
+android:text="No buses found"
+android:textColor="#E53935"
+android:textSize="18sp"
+android:visibility="gone"/>
+
+    </LinearLayout>
